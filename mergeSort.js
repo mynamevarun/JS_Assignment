@@ -25,7 +25,7 @@ function merge(array, left, mid, right)
     let j = 0;
  
     // Initial index of merged subarray
-    let k = l;
+    let k = left;
  
     while (i < leftArrayLength && j < rightArrayLength) {
         if (leftArray[i] <= rightArray[j]) {
