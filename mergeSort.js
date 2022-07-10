@@ -19,16 +19,16 @@ function merge(array, left, mid, right)
     // Merge the temp arrays back into array[l..right]
  
     // Initial index of first subarray
-    var i = 0;
+    let i = 0;
  
     // Initial index of second subarray
-    var j = 0;
+    let j = 0;
  
     // Initial index of merged subarray
-    var k = l;
+    let k = l;
  
     while (i < leftArrayLength && j < rightArrayLength) {
-        if (letArray[i] <= rightArray[j]) {
+        if (leftArray[i] <= rightArray[j]) {
             array[k] = leftArray[i];
             i++;
         }
@@ -42,7 +42,7 @@ function merge(array, left, mid, right)
     // Copy the remaining elements of
     // leftArray[], if there are any
     while (i < leftArrayLength) {
-        arr[k] = leftArray[i];
+        array[k] = leftArray[i];
         i++;
         k++;
     }
@@ -65,8 +65,8 @@ function mergeSort(array, left, right) {
         return; 
     }
   
-    let mid = left + parseInt((right-l)/2);
-    mergeSort(arrar, left, mid);
+    let mid = left + parseInt((right-left)/2);
+    mergeSort(array, left, mid);
     mergeSort(array, mid+1, right);
     merge(array, left, mid, right);
 }
